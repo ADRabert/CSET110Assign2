@@ -1,4 +1,4 @@
-# CSET 105 Assignment 2: DOM Practice
+# CSET 110 Assignment 2: DOM Practice
 
 ## Assignment Info
 This assignment combines what we've learned about creating websites & manipulating the DOM via JavaScript, and involves creating a fully working shopping cart system for a store page.
