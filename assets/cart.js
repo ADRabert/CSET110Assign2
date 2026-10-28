@@ -21,7 +21,8 @@ const changePrice = () => {
 	const cartItem = document.createElement("div");
 	cartItem.className = "cart-item cart-column";
 	const cartPrice = document.createElement("span");
-	cartPrice.className = "cart-price cart-column";
+	cartPrice.className = "cart-price cart-column",
+	cartPrice.innerText = document.body.getElementsByClassName("shop-item-price")[i].innerText;
 	const cartQuant = document.createElement("div");
 	cartQuant.className = "cart-quantity cart-column";
 	cartRow.append(...[cartItem, cartPrice, cartQuant]);
@@ -34,12 +35,13 @@ const changePrice = () => {
 	titleTag.innerText = document.body.getElementsByClassName("shop-item-title")[i].innerText;
 	cartItem.append(...[imgTag, titleTag]);
 
-	cartPrice.innerText = document.body.getElementsByClassName("shop-item-price")[i].innerText;
 	const quantInput = document.createElement("input");
-	quantInput.className = "cart-quantity-input", quantInput.min = 1, quantInput.type = "number", quantInput.value = 1;
+	quantInput.className = "cart-quantity-input", quantInput.min = 1,
+	quantInput.type = "number", quantInput.value = 1;
 	quantInput.setAttribute("onclick", "changePrice(this)");
 	const quantRemove = document.createElement("button");
-	quantRemove.className = "btn btn-danger", quantRemove.innerText = "REMOVE", quantRemove.type = "button";
+	quantRemove.className = "btn btn-danger", quantRemove.innerText = "REMOVE",
+	quantRemove.type = "button";
 	quantRemove.setAttribute("onclick", "removeItem(this.parentNode)");
 	cartQuant.append(...[quantInput, quantRemove]);
 
